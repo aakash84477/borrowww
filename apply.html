@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | Borrowww</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-home text-2xl text-blue-600 mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">Borrowww</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="lap.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Loan Against Property</a>
+                        <a href="home-loan.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home Loan</a>
+                        <a href="balance-transfer.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Balance Transfer</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="#" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Apply Now</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="lap.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Loan Against Property</a>
+                <a href="home-loan.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home Loan</a>
+                <a href="balance-transfer.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Balance Transfer</a>
+                <a href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Apply for Your Loan
+            </h1>
+            <p class="mt-4 text-xl text-blue-100 max-w-3xl">
+                Complete this simple form to get started with your loan application. Our representative will contact you within 24 hours.
+            </p>
+        </div>
+    </div>
+
+    <!-- Application Form -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <!-- Form Progress -->
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 bg-blue-600 rounded-full h-8 w-8 flex items-center justify-center text-white font-bold">1</div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-gray-900">Personal Information</h3>
+                        <p class="text-sm text-gray-500">Basic details about yourself</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Content -->
+            <div class="p-6">
+                <form id="loan-application">
+                    <!-- Personal Information -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-medium text-gray-900">Personal Details</h3>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First name *</label>
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name *</label>
+                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email address *</label>
+                                <input type="email" name="email" id="email" autocomplete="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone number *</label>
+                                <input type="tel" name="phone" id="phone" autocomplete="tel" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth *</label>
+                                <input type="date" name="dob" id="dob" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="pan" class="block text-sm font-medium text-gray-700">PAN Number *</label>
+                                <input type="text" name="pan" id="pan" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address Information -->
+                    <div class="mt-8 pt-8 border-t border-gray-200 space-y-6">
+                        <h3 class="text-lg font-medium text-gray-900">Address Information</h3>
+                        <div>
+                            <label for="street-address" class="block text-sm font-medium text-gray-700">Street address *</label>
+                            <input type="text" name="street-address" id="street-address" autocomplete="street-address" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="city" class="block text-sm font-medium text-gray-700">City *</label>
+                                <input type="text" name="city" id="city" autocomplete="address-level2" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="state" class="block text-sm font-medium text-gray-700">State *</label>
+                                <select id="state" name="state" autocomplete="address-level1" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select State</option>
+                                    <option value="AN">Andaman and Nicobar Islands</option>
+                                    <option value="AP">Andhra Pradesh</option>
+                                    <option value="AR">Arunachal Pradesh</option>
+                                    <option value="AS">Assam</option>
+                                    <option value="BR">Bihar</option>
+                                    <option value="CH">Chandigarh</option>
+                                    <option value="CT">Chhattisgarh</option>
+                                    <option value="DN">Dadra and Nagar Haveli</option>
+                                    <option value="DD">Daman and Diu</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="GJ">Gujarat</option>
+                                    <option value="HR">Haryana</option>
+                                    <option value="HP">Himachal Pradesh</option>
+                                    <option value="JK">Jammu and Kashmir</option>
+                                    <option value="JH">Jharkhand</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="LD">Lakshadweep</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="MN">Manipur</option>
+                                    <option value="ML">Meghalaya</option>
+                                    <option value="MZ">Mizoram</option>
+                                    <option value="NL">Nagaland</option>
+                                    <option value="OR">Odisha</option>
+                                    <option value="PY">Puducherry</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="SK">Sikkim</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="TG">Telangana</option>
+                                    <option value="TR">Tripura</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="UT">Uttarakhand</option>
+                                    <option value="WB">West Bengal</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="postal-code" class="block text-sm font-medium text-gray-700">PIN code *</label>
+                                <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" pattern="[0-9]{6}">
+                            </div>
+
+                            <div>
+                                <label for="country" class="block text-sm font-medium text-gray-700">Country *</label>
+                                <select id="country" name="country" autocomplete="country" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option>India</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loan Information -->
+                    <div class="mt-8 pt-8 border-t border-gray-200 space-y-6">
+                        <h3 class="text-lg font-medium text-gray-900">Loan Details</h3>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="loan-type" class="block text-sm font-medium text-gray-700">Loan Type *</label>
+                                <select id="loan-type" name="loan-type" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select Loan Type</option>
+                                    <option value="lap">Loan Against Property</option>
+                                    <option value="home">Home Loan</option>
+                                    <option value="balance">Balance Transfer</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="loan-amount" class="block text-sm font-medium text-gray-700">Loan Amount (₹) *</label>
+                                <input type="number" name="loan-amount" id="loan-amount" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="property-location" class="block text-sm font-medium text-gray-700">Property Location *</label>
+                                <input type="text" name="property-location" id="property-location" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="property-type" class="block text-sm font-medium text-gray-700">Property Type *</label>
+                                <select id="property-type" name="property-type" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select Property Type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="industrial">Industrial</option>
+                                    <option value="plot">Plot/Land</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="employment-type" class="block text-sm font-medium text-gray-700">Employment Type *</label>
+                            <select id="employment-type" name="employment-type" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select Employment Type</option>
+                                <option value="salaried">Salaried</option>
+                                <option value="self-employed">Self Employed</option>
+                                <option value="business">Business Owner</option>
+                                <option value="professional">Professional</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="monthly-income" class="block text-sm font-medium text-gray-700">Monthly Income (₹) *</label>
+                            <input type="number" name="monthly-income" id="monthly-income" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+
+                    <!-- Documents Upload -->
+                    <div class="mt-8 pt-8 border-t border-gray-200 space-y-6">
+                        <h3 class="text-lg font-medium text-gray-900">Documents Upload</h3>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="pan-card" class="block text-sm font-medium text-gray-700">PAN Card *</label>
+                                <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                    <div class="space-y-1 text-center">
+                                        <div class="flex text-sm text-gray-600">
+                                            <label for="pan-card" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                                                <span>Upload file</span>
+                                                <input id="pan-card" name="pan-card" type="file" class="sr-only" required>
+                                            </label>
+                                            <p class="pl-1">or drag and drop</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500">PNG, JPG, PDF up to 2MB</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="aadhaar-card" class="block text-sm font-medium text-gray-700">Aadhaar Card *</label>
+                                <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                    <div class="space-y-1 text-center">
+                                        <div class="flex text-sm text-gray-600">
+                                            <label for="aadhaar-card" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                                                <span>Upload file</span>
+                                                <input id="aadhaar-card" name="aadhaar-card" type="file" class="sr-only" required>
+                                            </label>
+                                            <p class="pl-1">or drag and drop</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500">PNG, JPG, PDF up to 2MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="terms" name="terms" type="checkbox" required class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="terms" class="font-medium text-gray-700">I agree to the <a href="#" class="text-blue-600 hover:text-blue-500">terms and conditions</a> and <a href="#" class="text-blue-600 hover:text-blue-500">privacy policy</a></label>
+                                <p class="text-gray-500">By submitting this form, I authorize Borrowww to contact me regarding loan services.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button type="submit" class="btn-primary w-full">
+                                Submit Application <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="lap.html" class="text-gray-300 hover:text-white">Loan Against Property</a></li>
+                        <li><a href="home-loan.html" class="text-gray-300 hover:text-white">Home Loan</a></li>
+                        <li><a href="balance-transfer.html" class="text-gray-300 hover:text-white">Balance Transfer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#emi-calculator" class="text-gray-300 hover:text-white">EMI Calculator</a></li>
+                        <li><a href="cibil-score.html" class="text-gray-300 hover:text-white">CIBIL Score Checker</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700">
+                <p class="text-gray-400 text-center">© 2023 Borrowww. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById('loan-application').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real application, you would send the form data to your server here
+            alert('Application submitted successfully! Our representative will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

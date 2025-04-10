@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowww - Digital Loans Against Property</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-home text-2xl text-blue-600 mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">Borrowww</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="lap.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Loan Against Property</a>
+                        <a href="home-loan.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home Loan</a>
+                        <a href="balance-transfer.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Balance Transfer</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="apply.html" class="btn-primary inline-flex items-center px-4 py-2 text-sm font-medium">Apply Now</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="lap.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Loan Against Property</a>
+                <a href="home-loan.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home Loan</a>
+                <a href="balance-transfer.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Balance Transfer</a>
+                <a href="apply.html" class="btn-primary block text-center mx-4 my-2">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
+                        Unlock Your Property's Potential
+                    </h1>
+                    <p class="text-xl text-blue-100 max-w-3xl">
+                        Get loans against your property with competitive interest rates, quick approval, and 100% online process.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="apply.html" class="btn-secondary text-center">
+                            Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#emi-calculator" class="bg-white text-blue-600 px-6 py-3 rounded-full font-medium text-center hover:bg-gray-100 transition">
+                            Check EMI <i class="fas fa-calculator ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Home loan" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMI Calculator -->
+    <div id="emi-calculator" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">EMI Calculator</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label for="loan-amount" class="block text-sm font-medium text-gray-700">Loan Amount (₹)</label>
+                    <input type="number" id="loan-amount" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" value="5000000">
+                </div>
+                <div>
+                    <label for="interest-rate" class="block text-sm font-medium text-gray-700">Interest Rate (%)</label>
+                    <input type="number" id="interest-rate" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" value="8.5" step="0.1">
+                </div>
+                <div>
+                    <label for="loan-tenure" class="block text-sm font-medium text-gray-700">Loan Tenure (Years)</label>
+                    <input type="number" id="loan-tenure" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" value="15">
+                </div>
+            </div>
+            <div class="mt-6">
+                <button onclick="calculateEMI()" class="btn-primary w-full">
+                    Calculate EMI <i class="fas fa-calculator ml-2"></i>
+                </button>
+            </div>
+            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                <h3 class="text-lg font-medium text-gray-900">Your Estimated EMI</h3>
+                <p class="mt-2 text-3xl font-bold text-blue-600">₹<span id="emi-result">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">Why Choose Borrowww?</h2>
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600 mb-4">
+                        <i class="fas fa-bolt text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Quick Approval</h3>
+                    <p class="text-gray-500">Get instant eligibility and quick loan approval</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-600 mb-4">
+                        <i class="fas fa-rupee-sign text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Low Interest Rates</h3>
+                    <p class="text-gray-500">Competitive rates starting from 8.5% p.a.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600 mb-4">
+                        <i class="fas fa-laptop text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">100% Online</h3>
+                    <p class="text-gray-500">Complete process from comfort of your home</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-600 mb-4">
+                        <i class="fas fa-file-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Minimal Documentation</h3>
+                    <p class="text-gray-500">Simple paperwork and quick disbursal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-6">
+                Ready to unlock your property's value?
+            </h2>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Get started with your loan application in just 5 minutes
+            </p>
+            <a href="apply.html" class="btn-secondary inline-flex items-center px-8 py-3 text-lg font-medium">
+                Apply Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="lap.html" class="text-gray-300 hover:text-white">Loan Against Property</a></li>
+                        <li><a href="home-loan.html" class="text-gray-300 hover:text-white">Home Loan</a></li>
+                        <li><a href="balance-transfer.html" class="text-gray-300 hover:text-white">Balance Transfer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#emi-calculator" class="text-gray-300 hover:text-white">EMI Calculator</a></li>
+                        <li><a href="cibil-score.html" class="text-gray-300 hover:text-white">CIBIL Score Checker</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700">
+                <p class="text-gray-400 text-center">© 2023 Borrowww. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
